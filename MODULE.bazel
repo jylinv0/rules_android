@@ -100,3 +100,13 @@ use_repo(bazel_binaries, "bazel_binaries")
 # extension for apksignerextensions
 apksig_extension = use_extension("//bzlmod_extensions:apksig.bzl", "apksig_extension")
 use_repo(apksig_extension, "apksig")
+
+# rules_robolectric > 4.11.1
+RULES_ROBOLECTRIC_COMMIT = "a5b25a8c27cc6add74bb01e62cd0dc72df8933ff"
+RULES_ROBOLECTRIC_SHA = "wErQv8LAP50nd8+P4IkYczddtsi+/56ntxuy/Qp5+0c="
+archive_override(
+  module_name = "rules_robolectric",
+  urls = ["https://github.com/robolectric/robolectric-bazel/archive/%s.zip" % RULES_ROBOLECTRIC_COMMIT],
+  integrity = "sha256-%s" % RULES_ROBOLECTRIC_SHA,
+  strip_prefix = "robolectric-bazel-%s" % RULES_ROBOLECTRIC_COMMIT
+)

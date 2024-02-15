@@ -88,9 +88,9 @@ def rules_android_prereqs(dev_mode = False):
     maybe(
         http_archive,
         name = "robolectric",
-        urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.10.3.tar.gz"],
-        strip_prefix = "robolectric-bazel-4.10.3",
-        sha256 = "1b199a932cbde4af728dd8275937091adbb89a4bf63d326de49e6d0a42e723bf",
+        urls = ["https://github.com/robolectric/robolectric-bazel/archive/a5b25a8c27cc6add74bb01e62cd0dc72df8933ff.tar.gz"],
+        strip_prefix = "robolectric-bazel-a5b25a8c27cc6add74bb01e62cd0dc72df8933ff",
+        sha256 = "a3c8274417e5def809186b2722aaf6bbe97f2737060a7ee93f68b1da938a721e",
     )
 
     maybe(
