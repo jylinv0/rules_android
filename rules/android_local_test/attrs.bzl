@@ -175,9 +175,10 @@ def make_attrs(additional_aspects = [], native_libs_transition = None):
             env = attr.string_dict(
                 doc = "A dictionary of environment variables set for the execution of the test. Will be subject to make variable and $(location) expansion.",
             ),
-            robolectric_properties_file = attr.string(
+            robolectric_properties_file = attr.label(
                 doc = "The classpath to robolectric-deps.properties file.",
-                default = "${JAVA_RUNFILES}/robolectric/bazel/robolectric-deps.properties",
+                allow_single_file = True,
+                default = "@robolectric//bazel:properties",
             ),
             test_class = attr.string(
                 doc = """
