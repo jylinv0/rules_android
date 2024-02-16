@@ -6,6 +6,9 @@ load("prereqs.bzl", "rules_android_prereqs")
 
 rules_android_prereqs(dev_mode = True)
 
+load("@rules_python//python:repositories.bzl", "py_repositories")
+py_repositories()
+
 load("//rules:rules.bzl", "android_sdk_repository")
 
 maybe(
