@@ -33,6 +33,7 @@ _config = {
     "https://pypi.python.org/simple/"],
     "isolated": True,
     "pip_data_exclude": [],
+    "python_interpreter_target": "@python3_11_host//:python",
     "python_interpreter": "python3",
     "quiet": True,
     "repo": "py_deps",

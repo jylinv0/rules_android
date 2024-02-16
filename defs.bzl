@@ -114,6 +114,7 @@ def rules_android_workspace():
 
     pip_parse(
         name = "py_deps",
+        python_interpreter_target = "@python3_11_host//:python",
         requirements_lock = Label("//py_support:requirements_lock.txt"),
     )
 
