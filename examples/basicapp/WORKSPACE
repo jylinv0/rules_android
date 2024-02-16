@@ -28,6 +28,10 @@ local_repository(
 
 load("@rules_android//:prereqs.bzl", "rules_android_prereqs")
 rules_android_prereqs()
+
+load("@rules_python//python:repositories.bzl", "py_repositories")
+py_repositories()
+
 load("@rules_android//:defs.bzl", "rules_android_workspace")
 rules_android_workspace()
 
